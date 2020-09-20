@@ -56,7 +56,7 @@ app.post('/sub', (req, res) => {
         });
     }
 
-    if(num1 - num2 < 1000000){
+    if(num1 < 1000000 || num2 < 1000000){
         return res.json({
             status: 'error',
             message: 'Underflow',
