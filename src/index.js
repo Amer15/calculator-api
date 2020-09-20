@@ -96,7 +96,7 @@ app.post('/multiply', (req, res) => {
     });
 });
 
-app.post('/division', (req, res) => {
+app.post('/divide', (req, res) => {
     const num1 = parseFloat(req.body.num1);
     const num2 = parseFloat(req.body.num2);
 
@@ -124,7 +124,7 @@ app.post('/division', (req, res) => {
     return res.json({
         status: 'success',
         message: 'The division of given numbers',
-        result: num1 / num2
+        sum: num1 / num2
     });
 });
 
