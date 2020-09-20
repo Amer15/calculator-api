@@ -68,7 +68,7 @@ app.post('/sub', (req, res) => {
     return res.json({
         status: 'success',
         message: 'the difference of given two numbers',
-        result
+        difference: result
     });
 });
 
