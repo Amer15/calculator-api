@@ -56,7 +56,9 @@ app.post('/sub', (req, res) => {
         });
     }
 
-    if(num1 - num2 < -1000000){
+    const result = num1 - num2;
+
+    if(result < -1000000){
         return res.json({
             status: 'error',
             message: 'Underflow',
@@ -66,7 +68,7 @@ app.post('/sub', (req, res) => {
     return res.json({
         status: 'success',
         message: 'the difference of given two numbers',
-        sum: num1 - num2
+        result
     });
 });
 
