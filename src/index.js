@@ -82,7 +82,9 @@ app.post('/multiply', (req, res) => {
         });
     }
 
-    if(num1 * num2 > 1000000){
+    const result = num1 * num2;
+
+    if(result > 1000000){
         return res.json({
             status: 'error',
             message: 'Overflow',
@@ -92,7 +94,7 @@ app.post('/multiply', (req, res) => {
     return res.json({
         status: 'success',
         message: 'The product of given numbers',
-        sum: num1 * num2
+        result
     });
 });
 
