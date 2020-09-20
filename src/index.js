@@ -126,7 +126,7 @@ app.post('/divide', (req, res) => {
     return res.json({
         status: 'success',
         message: 'The division of given numbers',
-        sum: result
+        result
     });
 });
 
